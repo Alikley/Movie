@@ -1,6 +1,6 @@
-import useMovies from "../hooks/useMovies";
-
-
+import useMovies from "@/hooks/useMovies";
+import { Image } from "@chakra-ui/react";
+import Carousel from "react-bootstrap/Carousel";
 function MovieSlider() {
   const { data, isLoading, error } = useMovies();
 
@@ -9,8 +9,22 @@ function MovieSlider() {
   if (!data || data.length === 0) return <p>No movies found.</p>;
 
   return (
-    <div style={{width:"100%", margin: '0 auto' }}> {/* Container for responsiveness */}
-      <h1>sacfsa</h1>
+    <div>
+      <Carousel>
+        {data.map((movie) => (
+          <Carousel.Item key={movie.id}>
+            <Image
+              className="d-block w-100 h-25"
+              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+              alt={movie.original_title}
+            />
+            <Carousel.Caption>
+              <h5>{movie.original_title}</h5>
+              <p>{movie.overview}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </div>
   );
 }
