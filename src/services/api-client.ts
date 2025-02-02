@@ -1,13 +1,12 @@
 import axios from "axios";
 export interface FetchResponse<T> {
-  
   results: T[];
 }
 const axiosInstance = axios.create({
-  baseURL: "https://api.themoviedb.org/3/discover",
-  params:{
-    api_key:"950b206c92f5d85c0d77ec2a566692fe"
-  }
+  baseURL: "https://api.themoviedb.org/3",
+  params: {
+    api_key: "950b206c92f5d85c0d77ec2a566692fe",
+  },
 });
 
 class APICLIENT<T> {
@@ -21,93 +20,9 @@ class APICLIENT<T> {
   };
   get = (id: number | string) => {
     return axiosInstance
-      .get<T>(this.endpoint + "/" + id)
+      .get<T>(`/movie/${id}`)
       .then((res) => res.data);
   };
-  post = async (data:T) => {
-   return axiosInstance.post<T>(this.endpoint, data)
-        .then((response) => response.data);
-  }
-  Delete = async (data:T) => {
-    return axiosInstance.post<T>(this.endpoint, data)
-         .then((response) => response.data);
-   }
-
 }
 
 export default APICLIENT;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
