@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/login/LoginPage";
 import useAuthStore from "./pages/login/store";
 import MovieInfoPage from "./pages/MovieInfoPage";
+import TvShowInfoPage from "./pages/TvShowInfoPage";
 // const { user, login } = useAuthStore();
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "movie/:id",
         element: <MovieInfoPage />,
+      },
+      {
+        path: "tv/:id",
+        element: <TvShowInfoPage />,
       },
     ],
   },
