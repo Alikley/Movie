@@ -27,6 +27,7 @@ function MovieInfoPage() {
                 {movie.original_title}
               </h5>
               <p className="text-xl max-w-2xl ">{movie.overview}</p>
+                <br />
                 <CriticScore score={movie.vote_average}/>
             </div>
       </div>

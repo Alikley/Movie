@@ -1,4 +1,4 @@
-import useMovies from "@/hooks/useMovies";
+import useMovies from "@/hooks/useMoviesHome";
 import { Image } from "@chakra-ui/react";
 import Carousel from "react-bootstrap/Carousel";
 import { CiCircleInfo } from "react-icons/ci";

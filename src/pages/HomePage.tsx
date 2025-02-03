@@ -1,4 +1,4 @@
-import MoviesCard from "../components/MoviesCard";
+import MoviesCard from "../components/MoviesCardHome";
 import MovieSlider from "../components/MovieSlider";
 
 function HomePage() {
