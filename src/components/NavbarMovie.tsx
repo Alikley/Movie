@@ -20,12 +20,12 @@ function NavbarMovie() {
             justify="center"
           >
             <NavbarItem>
-              <NavLink color="foreground" to="#">
+              <NavLink color="foreground" to="/movies">
                 Movie
               </NavLink>
             </NavbarItem>
             <NavbarItem isActive>
-              <NavLink aria-current="page" to="#">
+              <NavLink aria-current="page" to="/tvShows">
                 TvShow
               </NavLink>
             </NavbarItem>
