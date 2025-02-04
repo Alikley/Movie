@@ -13,7 +13,7 @@ function MovieSlider() {
   return (
     <div>
       <Carousel>
-        {data.map((movie) => (
+        {data.slice(4,8).map((movie) => (
           <Carousel.Item key={movie.id}>
             <Image
               className="d-block w-100 h-25"
